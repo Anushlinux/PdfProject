@@ -10,7 +10,7 @@ from langchain.llms import HuggingFaceHub
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
-import os
+
 
 
 def get_pdf_text(pdf_files):
@@ -70,7 +70,7 @@ def handle_user_input(user_question):
 def main():
 
     load_dotenv()
-    print(os.getenv("GOOGLE_API_KEY"))
+
     st.set_page_config(page_title="Chat with multiple pdfs", page_icon=":smiley:", layout="wide", initial_sidebar_state="expanded")    
     
     st.write(css, unsafe_allow_html=True)
